@@ -6,5 +6,8 @@ export default function(server) {
   */
 
   // server.createList('post', 10);
-  server.createList('list',10)
+ const lists = server.createList('list',2)
+ lists.forEach(list => {
+  server.createList('todo',4,{list})
+ });
 }

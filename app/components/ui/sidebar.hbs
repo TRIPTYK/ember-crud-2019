@@ -3,11 +3,16 @@
     <div class="uppercase tracking-wide text-c2 mb-4">
       Todos Lists
     </div>
-    Loading Data
-    <ul>
-      {{#each this.lists as |list|}}
-        <Ui::ListItem @title={{list.title}} />
-      {{/each}}
-    </ul>
+    <div {{did-insert this.loadData}}>
+      {{#if this.isLoading}}
+        Loading Data...
+      {{else}}
+        <ul>
+          {{#each this.lists as |list|}}
+            <Ui::ListItem @title={{list.title}} @listId={{list.id}} />
+          {{/each}}
+        </ul>
+      {{/if}}
+    </div>
   </div>
 </div>

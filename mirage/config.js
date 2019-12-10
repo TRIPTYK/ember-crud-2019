@@ -28,4 +28,9 @@ export default function() {
  this.get('/lists/:id');
  this.put('/lists/:id'); // or this.patch
  this.del('/lists/:id');
+ this.get('/todos');
+ this.post('/todos');
+ this.get('/todos/:id');
+ this.put('/todos/:id'); // or this.patch
+ this.del('/todos/:id');
 }
