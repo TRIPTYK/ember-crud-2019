@@ -7,7 +7,7 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
-  this.route('list', {
-    path: ':listId'
+  this.route('lists', {
+    path: 'lists/:listId'
   });
 });

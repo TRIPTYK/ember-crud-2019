@@ -3,8 +3,9 @@
     <div class="uppercase tracking-wide text-c2 mb-4">
       Todos Lists
     </div>
+    Loading Data
     <ul>
-      {{#each @lists as |list|}}
+      {{#each this.lists as |list|}}
         <Ui::ListItem @title={{list.title}} />
       {{/each}}
     </ul>
