@@ -8,6 +8,6 @@ export default function(server) {
   // server.createList('post', 10);
  const lists = server.createList('list',2)
  lists.forEach(list => {
-  server.createList('todo',4,{list})
+  server.createList('todo',Math.round(Math.random()*5)+1,{list})
  });
 }

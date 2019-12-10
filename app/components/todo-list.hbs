@@ -2,7 +2,7 @@
   <div class="flex flex-wrap w-full">
     <div class="bg-white rounded shadow p-6 m-4 w-full">
       <div class="mb-4">
-        <h1 class="text-gray-900 ">
+        <h1 class="text-gray-900 text-3xl">
           {{@list.title}}
         </h1>
         <div class="flex mt-4">
@@ -16,8 +16,9 @@
         </div>
       </div>
       <div>
-        <TodoItem />
-        <TodoItem />
+        {{#each @list.todos as |todo|}}
+          <TodoItem @body={{todo.body}} />
+        {{/each}}
       </div>
       <nav>
         <button class="flex-no-shrink p-2 border-2 rounded text-teal border-teal hover:text-white hover:bg-teal-500">
