@@ -1,9 +1,20 @@
 <div class="overflow-hidden shadow-lg  bg-white mb-4 border-red-light w-full h-screen">
   <div class="px-6 py-4 mb-2 mt-4 mb-8">
-    <div class="uppercase tracking-wide text-c2 mb-4">
-      Todos Lists
+    <div class="flex justify-between uppercase tracking-wide text-c2 mb-4">
+      <p class="align-middle text-2xl">
+        Todos Lists
+      </p>
+      <button
+        class="flex-no-shrink p-2 border-2 rounded text-teal border-teal hover:text-white hover:bg-teal-500"
+        {{on "click" this.enterEditMode}}
+      >
+        {{if this.isEditing "Hide form" "add List"}}
+      </button>
     </div>
-    <div {{did-insert this.loadData}}>
+    {{#if this.isEditing}}
+      <Ui::AddItem @placeHolder="Add list" @items={{this.lists}} @submit={{this.submitItem }} />
+    {{/if}}
+    <div class="pt-3" {{did-insert this.loadData}}>
       {{#if this.isLoading}}
         Loading Data...
       {{else}}
