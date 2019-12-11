@@ -5,9 +5,11 @@ export default class Router extends EmberRouter {
   location = config.locationType;
   rootURL = config.rootURL;
 }
-
 Router.map(function() {
   this.route('lists', {
     path: 'lists/:listId'
+  });
+  this.route('error404',{
+    path: '/*'
   });
 });

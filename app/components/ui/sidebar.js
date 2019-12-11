@@ -22,7 +22,7 @@ export default class UiSidebarComponent extends Component {
   @action
   async submitItem(item){
     let newList = await this.store.createRecord('list');
-    newList.title = item;
+    newList.titre = item;
     await newList.save();
     this.isEditing = false;
   }

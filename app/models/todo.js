@@ -1,7 +1,7 @@
 import Model,{attr, belongsTo} from '@ember-data/model';
 
 export default class TodoModel extends Model {
-  @attr()body;
+  @attr()description;
   @attr()done;
   @belongsTo() list;
 }

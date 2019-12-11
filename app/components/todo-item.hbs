@@ -1,6 +1,6 @@
 <div class="flex mb-4 items-center">
-  <p class="w-full text-grey-darkest  {{if @todo.done "line-through text-gray-300" }}">
-    {{@todo.body}}
+  <p class="w-full {{if @todo.done "line-through text-gray-300" "text-grey-darkest" }}">
+    {{@todo.description}}
   </p>
   <button
     class="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded hover:text-white text-green-500 border-green-500 hover:bg-green-500 "
@@ -8,7 +8,7 @@
   >
     Done
   </button>
-  <button class="flex-no-shrink p-2 ml-2 border-2 rounded text-red border-red-500 hover:text-white hover:bg-red-500">
+  <button class="flex-no-shrink p-2 ml-2 border-2 rounded text-red border-red-500 hover:text-white hover:bg-red-500" {{on "click" this.removeClick}}>
     Remove
   </button>
 </div>

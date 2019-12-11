@@ -3,7 +3,7 @@
     <div class="bg-white rounded shadow p-6 m-4 w-full">
       <div class="mb-4">
         <h1 class="text-gray-900 text-3xl">
-          {{@list.title}}
+          {{@list.titre}}
         </h1>
         <Ui::AddItem @submit={{this.submitItem}} @placeHolder="Add todo" />
       </div>
@@ -13,9 +13,9 @@
         {{/each}}
       </div>
       <nav>
-        <button class="flex-no-shrink p-2 border-2 rounded text-teal border-teal hover:text-white hover:bg-teal-500">
-          Remove
-      list
+        <button class="flex-no-shrink p-2 border-2 rounded text-teal border-teal hover:text-white hover:bg-teal-500"
+        {{on "click" this.removeList}}>
+          Remove list
         </button>
       </nav>
     </div>
