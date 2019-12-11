@@ -4,3 +4,8 @@
 
 
 @import "tailwindcss/utilities";
+
+.active li div{
+  border-left-color: #f00;
+  color:#f00;
+}

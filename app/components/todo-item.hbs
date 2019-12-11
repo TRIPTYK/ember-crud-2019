@@ -1,9 +1,10 @@
 <div class="flex mb-4 items-center">
-  <p class="w-full text-grey-darkest">
-    {{@body}}
+  <p class="w-full text-grey-darkest  {{if @todo.done "line-through text-gray-300" }}">
+    {{@todo.body}}
   </p>
   <button
-    class="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded hover:text-white text-green-500 border-green-500 hover:bg-green-500"
+    class="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded hover:text-white text-green-500 border-green-500 hover:bg-green-500 "
+    {{on "click" this.doneClick}}
   >
     Done
   </button>

@@ -26,11 +26,13 @@ export default function() {
  this.get('/lists');
  this.post('/lists');
  this.get('/lists/:id');
+ this.patch('/lists/:id'); // or this.patch
  this.put('/lists/:id'); // or this.patch
  this.del('/lists/:id');
  this.get('/todos');
  this.post('/todos');
  this.get('/todos/:id');
+ this.patch('/todos/:id'); // or this.patch
  this.put('/todos/:id'); // or this.patch
  this.del('/todos/:id');
 }

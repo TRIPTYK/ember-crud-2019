@@ -24,6 +24,7 @@ export default class UiSidebarComponent extends Component {
     let newList = await this.store.createRecord('list');
     newList.title = item;
     await newList.save();
+    this.isEditing = false;
   }
 
 }

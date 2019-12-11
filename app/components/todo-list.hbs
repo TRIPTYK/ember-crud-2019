@@ -9,7 +9,7 @@
       </div>
       <div>
         {{#each @list.todos as |todo|}}
-          <TodoItem @body={{todo.body}} />
+          <TodoItem @todo={{todo}} />
         {{/each}}
       </div>
       <nav>

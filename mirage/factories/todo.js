@@ -3,5 +3,8 @@ import faker from 'faker';
 export default Factory.extend({
   body(){
     return faker.lorem.sentence();
+  },
+  done(){
+    return false;
   }
 });
